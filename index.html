@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<title>WON'S 시제품 · SSAFY 경진대회</title>
+<meta name="description" content="SSAFY 아이디어 경진대회 본선 시제품입니다. 실제 은행 앱이 아니며 모든 데이터는 가상입니다.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar" id="bar">
+  <p class="bar__label"><b>SSAFY 경진대회 시제품</b> · 실제 은행 앱 아님 · 가상 데이터</p>
+  <div class="bar__actions" id="barActions" hidden>
+    <button type="button" id="btnSwap">고객 바꾸기</button>
+    <button type="button" id="btnList">화면 목록</button>
+  </div>
+</header>
+
+<main class="phone" id="phone">
+  <!-- 첫 화면: 가상 고객 뽑기 -->
+  <section class="intro" id="intro">
+    <p class="intro__eyebrow">WON'S · 고객마다 다른 첫 화면</p>
+    <h1 class="intro__title">어떤 고객이<br>나올까요?</h1>
+    <p class="intro__body">저희에게는 실제 고객 데이터가 없어요. 그래서 가상 고객 세 명 중 한 명을 무작위로 배정하고, 그 고객의 데이터에 맞춰 바뀐 홈을 보여 드려요.</p>
+    <div class="deck" id="deck" aria-hidden="true">
+      <div class="deck__card">A</div><div class="deck__card">B</div><div class="deck__card">C</div>
+    </div>
+    <button type="button" class="cta" id="btnDraw">가상 고객 뽑기</button>
+  </section>
+
+  <!-- 뽑힌 고객의 데이터 카드 -->
+  <section class="profile" id="profile" hidden>
+    <p class="profile__eyebrow" id="pEyebrow"></p>
+    <h2 class="profile__title" id="pTitle"></h2>
+    <div class="profile__box">
+      <p class="profile__head">이 고객의 데이터 <span>(가상)</span></p>
+      <ul id="pData"></ul>
+    </div>
+    <div class="profile__arrow" aria-hidden="true">↓</div>
+    <div class="profile__box profile__box--rule">
+      <p class="profile__head">그래서 홈이 이렇게 바뀌어요</p>
+      <ul id="pRule"></ul>
+    </div>
+    <p class="profile__note">조회·이체 자리는 누구에게나 그대로예요. 바뀌는 건 소식과 추천, 보여 주는 방식뿐이에요.</p>
+    <button type="button" class="cta" id="btnHome">이 고객의 홈 보기</button>
+    <button type="button" class="ghost" id="btnRedraw">다른 고객 뽑기</button>
+  </section>
+
+  <!-- 앱 화면 -->
+  <section class="screen" id="screen" hidden>
+    <div class="screen__frame" id="frame">
+      <img id="shot" alt="">
+      <div class="spots" id="spots"></div>
+    </div>
+  </section>
+</main>
+
+<div class="sheet" id="list" hidden>
+  <div class="sheet__panel" role="dialog" aria-label="화면 목록">
+    <p class="sheet__title">화면 목록</p>
+    <ol id="listItems"></ol>
+    <button type="button" class="ghost" id="btnListClose">닫기</button>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="screens.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

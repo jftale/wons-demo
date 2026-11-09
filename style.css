@@ -83,6 +83,14 @@ button { font: inherit; cursor: pointer; }
 .profile li::before { content: ""; position: absolute; left: 0; top: .65em; width: 5px; height: 5px; border-radius: 50%; background: #9aa3b2; }
 .profile__box--rule li::before { background: var(--blue); }
 .profile__arrow { text-align: center; color: #9aa3b2; font-size: 20px; margin: 6px 0; }
+.intro__legal { margin: 14px 0 0; padding: 10px 12px; border-radius: 10px; background: #fff7e6; color: #7a5a1e; font-size: 13px; line-height: 1.5; }
+.profile__why { margin: -8px 0 18px; font-size: 15px; line-height: 1.6; color: var(--ink-2); }
+.pairs li { padding-left: 0; }
+.pairs li::before { display: none; }
+.pairs li + li { margin-top: 12px; padding-top: 12px; border-top: 1px solid #e6eaf0; }
+.pairs .from { display: block; font-size: 14px; color: var(--ink-2); }
+.pairs .to { display: block; margin-top: 2px; font-size: 15px; font-weight: 700; color: var(--blue); }
+.pairs .to::before { content: "→ "; font-weight: 500; }
 .profile__note { margin: 16px 0 20px; font-size: 13px; line-height: 1.55; color: var(--ink-2); }
 .profile.is-in { animation: rise .45s cubic-bezier(.2,.8,.2,1); }
 @keyframes rise { from { opacity: 0; transform: translateY(16px); } }

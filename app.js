@@ -4,52 +4,37 @@
 
   // 가상 고객 세 명. 모든 값은 시연용 가상 데이터(Figma 화면의 숫자와 맞춤)
   var CUSTOMERS = {
+    // pairs: [거래 내역(가상), 그래서 홈에서 달라지는 것]
     A: {
       home: "s01",
-      eyebrow: "가상 고객 A",
+      eyebrow: "배정된 가상 고객 A",
       title: "20대 직장인,<br>오늘 월급날이에요",
-      data: [
-        "오늘 월급 312만 원이 들어왔어요",
-        "매달 자동이체 3건이 빠져나가요",
-        "지난 3개월 동안 자동이체 뒤에도 돈이 남았어요",
-        "가입한 적금은 없어요"
-      ],
-      rule: [
-        "맨 위 소식: 오늘 들어온 월급",
-        "계좌 아래: 이번 달 예상 여유 자금 약 48만 원",
-        "추천: 여유 자금으로 시작하는 적금(WON챌린지)",
-        "헤더의 AI 비서에서 오늘 챙길 일을 모아 봐요"
+      pairs: [
+        ["오늘 월급 312만 원 입금", "맨 위 소식에 오늘 들어온 월급"],
+        ["자동이체 3건, 지난 3개월 자동이체 뒤에도 돈이 남음", "계좌 아래에 예상 여유 자금 약 48만 원"],
+        ["가입한 적금 없음", "여유 자금으로 시작하는 적금(WON챌린지) 추천"],
+        ["오늘 챙길 일이 여럿", "헤더의 AI 비서가 한곳에 모아 보여 줌"]
       ]
     },
     B: {
       home: "s02",
-      eyebrow: "가상 고객 B",
+      eyebrow: "배정된 가상 고객 B",
       title: "60대, 큰 글씨<br>쉬운홈을 써요",
-      data: [
-        "오늘 연금 82만 원이 들어왔어요",
-        "딸에게 자주 돈을 보내요",
-        "쉬운홈을 켜 두고 써요"
-      ],
-      rule: [
-        "쉬운홈은 그대로, 큰 글씨도 그대로",
-        "맨 위 소식: 오늘 들어온 연금",
-        "계좌 아래: 자주 보내는 분께 바로 보내기",
-        "아래쪽: 금융사기 예방 상담 번호"
+      pairs: [
+        ["쉬운홈을 켜 두고 씀", "쉬운홈과 큰 글씨는 그대로"],
+        ["오늘 연금 82만 원 입금", "맨 위 소식에 오늘 들어온 연금"],
+        ["딸에게 자주 송금", "계좌 아래에 자주 보내는 분께 바로 보내기"],
+        ["처음 보내는 계좌가 가끔 있음", "금융사기 예방 안내와 상담 번호를 아래에"]
       ]
     },
     C: {
       home: "s03",
-      eyebrow: "가상 고객 C",
+      eyebrow: "배정된 가상 고객 C",
       title: "30대, 조회와 이체만<br>빠르게 써요",
-      data: [
-        "앱에서는 잔액 조회와 이체만 해요",
-        "잔액 숨김을 켜 두었어요",
-        "내일 카드대금 61만 원이 빠져나가요"
-      ],
-      rule: [
-        "홈은 지금 앱과 거의 같게 둬요",
-        "맨 위 소식만 바뀌어요: 내일 카드대금과 빠져나간 뒤 잔액",
-        "추천을 늘리지 않아요"
+      pairs: [
+        ["앱에서 잔액 조회와 이체만 사용", "홈은 지금 앱과 거의 같게 둠"],
+        ["내일 카드대금 61만 원 출금 예정", "맨 위 소식만 바뀜: 카드대금과 빠져나간 뒤 잔액"],
+        ["잔액 숨김을 켜 둠", "잔액 숨김 그대로, 추천을 늘리지 않음"]
       ]
     }
   };
@@ -105,12 +90,17 @@
     var c = CUSTOMERS[current];
     $("pEyebrow").textContent = c.eyebrow + " · 무작위 배정";
     $("pTitle").innerHTML = c.title;
-    $("pData").innerHTML = c.data.map(li).join("");
-    $("pRule").innerHTML = c.rule.map(li).join("");
+    var list = $("pData");
+    list.textContent = "";
+    c.pairs.forEach(function (pr) {
+      var item = document.createElement("li");
+      var from = document.createElement("span"); from.className = "from"; from.textContent = pr[0];
+      var to = document.createElement("span"); to.className = "to"; to.textContent = pr[1];
+      item.appendChild(from); item.appendChild(to); list.appendChild(item);
+    });
     show("profile");
     el.profile.classList.remove("is-in"); void el.profile.offsetWidth; el.profile.classList.add("is-in");
   }
-  function li(t) { return "<li>" + t + "</li>"; }
 
   function renderScreen(id) {
     var s = S[id];

@@ -3,7 +3,7 @@ window.SCREENS = {
   "name": "01 홈 A · 직장인(월급날)",
   "w": 360,
   "h": 1470,
-  "src": "screens/s01.webp",
+  "src": "screens/s01.webp?v=4",
   "spots": [
    {
     "l": 5.56,
@@ -74,7 +74,7 @@ window.SCREENS = {
   "name": "02 홈 B · 60대 쉬운홈",
   "w": 360,
   "h": 1106,
-  "src": "screens/s02.webp",
+  "src": "screens/s02.webp?v=4",
   "spots": [
    {
     "l": 85.0,
@@ -103,7 +103,7 @@ window.SCREENS = {
   "name": "03 홈 C · 이체만 쓰는 고객(거의 그대로)",
   "w": 360,
   "h": 1645,
-  "src": "screens/s03.webp",
+  "src": "screens/s03.webp?v=4",
   "spots": [
    {
     "l": 58.61,
@@ -146,7 +146,7 @@ window.SCREENS = {
   "name": "04 A · 소비 요약과 참고 여유 자금",
   "w": 360,
   "h": 780,
-  "src": "screens/s04.webp",
+  "src": "screens/s04.webp?v=4",
   "spots": [
    {
     "l": 52.22,
@@ -168,7 +168,7 @@ window.SCREENS = {
   "name": "05 A · 왜 추천했나요?",
   "w": 360,
   "h": 780,
-  "src": "screens/s05.webp",
+  "src": "screens/s05.webp?v=4",
   "spots": [
    {
     "l": 54.72,
@@ -197,17 +197,17 @@ window.SCREENS = {
   "name": "06 AI 비서 · 오늘 챙길 일",
   "w": 360,
   "h": 780,
-  "src": "screens/s06.webp",
+  "src": "screens/s06.webp?v=4",
   "spots": [
    {
-    "l": 17.22,
+    "l": 7.78,
     "t": 37.179,
     "w": 43.61,
     "h": 5.769,
     "to": "s07"
    },
    {
-    "l": 63.61,
+    "l": 54.44,
     "t": 37.179,
     "w": 32.22,
     "h": 5.769,
@@ -226,7 +226,7 @@ window.SCREENS = {
   "name": "07 가입 1/3 · 불러온 정보 확인",
   "w": 360,
   "h": 780,
-  "src": "screens/s07.webp",
+  "src": "screens/s07.webp?v=4",
   "spots": [
    {
     "l": 5.56,
@@ -255,7 +255,7 @@ window.SCREENS = {
   "name": "08 가입 · 매달 넣을 돈(직접 입력)",
   "w": 360,
   "h": 780,
-  "src": "screens/s08.webp",
+  "src": "screens/s08.webp?v=4",
   "spots": [
    {
     "l": 5.56,
@@ -277,7 +277,7 @@ window.SCREENS = {
   "name": "09 가입 3/3 · 설명·동의·최종 확인",
   "w": 360,
   "h": 868,
-  "src": "screens/s09.webp",
+  "src": "screens/s09.webp?v=4",
   "spots": [
    {
     "l": 5.56,
@@ -317,7 +317,7 @@ window.SCREENS = {
   "name": "10 가입 · 결과",
   "w": 360,
   "h": 780,
-  "src": "screens/s10.webp",
+  "src": "screens/s10.webp?v=4",
   "spots": [
    {
     "l": 5.56,
@@ -332,7 +332,7 @@ window.SCREENS = {
   "name": "11 오류 · 인증 전에 잔액이 바뀜",
   "w": 360,
   "h": 780,
-  "src": "screens/s11.webp",
+  "src": "screens/s11.webp?v=4",
   "spots": [
    {
     "l": 8.89,
@@ -354,7 +354,7 @@ window.SCREENS = {
   "name": "12 오류 · 자동이체만 실패",
   "w": 360,
   "h": 780,
-  "src": "screens/s12.webp",
+  "src": "screens/s12.webp?v=4",
   "spots": [
    {
     "l": 5.56,
@@ -376,7 +376,7 @@ window.SCREENS = {
   "name": "13 설정 · 내 홈 맞춤",
   "w": 360,
   "h": 780,
-  "src": "screens/s13.webp",
+  "src": "screens/s13.webp?v=4",
   "spots": [
    {
     "l": 1.11,
